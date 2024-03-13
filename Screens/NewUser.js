@@ -9,8 +9,8 @@ import {
 } from "react-native";
 import { Button } from "react-native";
 
-export default function Authentification() {
-  var email, pwd;
+export default function NewUser() {
+  var email, pwd, confirmPwd;
   return (
     <ImageBackground
       source={require("../assets/background.jpg")}
@@ -36,7 +36,7 @@ export default function Authentification() {
             borderRadius: 5,
           }}
         >
-          Bienvenue
+          Créer un compte
         </Text>
         <TextInput
           style={styles.inputStyle}
@@ -48,6 +48,12 @@ export default function Authentification() {
           style={styles.inputStyle}
           placeholder="Mot de passe"
           onChangeText={(ch) => (pwd = ch)}
+        ></TextInput>
+        <TextInput
+          secureTextEntry={true}
+          style={styles.inputStyle}
+          placeholder="Confirmer le mot de passe"
+          onChangeText={(ch) => (confirmPwd = ch)}
         ></TextInput>
 
         <View
@@ -83,7 +89,7 @@ export default function Authentification() {
             marginRight: 35,
           }}
         >
-          Créer un compte
+          Page de connexion
         </Text>
       </View>
 
